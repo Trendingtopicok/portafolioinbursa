@@ -1,0 +1,11 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "devCommand": "python -m http.server 8000",
+  "redirects": [
+    {
+      "source": "/productos",
+      "destination": "/#productos"
+    }
+  ]
+}
