@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente Certificado Inbursa | Seguros, Créditos y Banca</title>
+    <meta name="description" content="Seguros, Créditos, TPV y Banca Inbursa. Atención directa por WhatsApp con agente certificado. Sin filas, sin sucursales.">
+    
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusitio.com/">
+    <meta property="og:title" content="Agente Certificado Inbursa">
+    <meta property="og:description" content="Seguros, créditos, TPV y más. Sin filas, sin sucursales. Atención directa por WhatsApp.">
+    <meta property="og:image" content="img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agente Certificado Inbursa">
+    <meta name="twitter:description" content="Seguros, créditos, TPV y más. Atención directa por WhatsApp.">
+    <meta name="twitter:image" content="img/og-image.jpg">
+
+    <meta name="theme-color" content="#003366">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f8fafc;color:#1e293b}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid #e2e8f0}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center}
+.hero-bg-img{position:absolute;inset:0;background:url('img/hero-oficinas-inbursa.jpg') center/cover no-repeat;filter:brightness(.3) saturate(.5)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,20,70,.92) 0%,rgba(0,80,160,.7) 60%,rgba(0,160,220,.35) 100%)}
+.hero-content{position:relative;z-index:2}
+
+/* PRODUCTOS ESTRELLA */
+.star-card{background:white;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .3s;box-shadow:0 2px 8px rgba(0,0,0,.06);position:relative}
+.star-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,51,102,.12);border-color:#0066cc}
+.star-card-img{width:100%;height:180px;object-fit:cover;display:block}
+.star-card-body{padding:16px 18px}
+.star-card-badge{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,#003366,#0066cc);color:white;font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+.star-card-title{font-size:16px;font-weight:800;color:#003366;margin-bottom:4px}
+.star-card-benefit{font-size:13px;color:#475569;margin-bottom:12px;line-height:1.5}
+
+/* BENEFIT PILLS */
+.benefit-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.benefit-pill{background:#f1f5f9;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:600;color:#475569}
+.benefit-pill.green{background:#dcfce7;color:#166534}
+.benefit-pill.blue{background:#dbeafe;color:#1d4ed8}
+.benefit-pill.orange{background:#ffedd5;color:#c2410c}
+.benefit-pill.purple{background:#f3e8ff;color:#7e22ce}
+
+/* CTA BOTONES */
+.cta-wa{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25d366,#1da851);color:white;padding:12px 20px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;transition:all .25s;width:100%;justify-content:center}
+.cta-wa:hover{transform:scale(1.03);box-shadow:0 8px 25px rgba(37,211,102,.35)}
+
+/* SECCIÓN CATÁLOGO */
+.catalog-section{display:none}
+.catalog-section.active{display:block}
+
+/* TABS */
+.cat-tab{padding:10px 20px;border-radius:50px;font-weight:600;font-size:13px;cursor:pointer;transition:all .25s;border:2px solid transparent;background:#f1f5f9;color:#475569;white-space:nowrap}
+.cat-tab:hover{border-color:#0066cc;color:#0066cc}
+.cat-tab.active{background:#003366;color:white;border-color:#003366}
+
+/* CARD CATÁLOGO */
+.pcard{background:white;border-radius:14px;overflow:hidden;border:1px solid #e2e8f0;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+.pcard:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,51,102,.1);border-color:#0066cc}
+.pcard-img{width:100%;height:170px;object-fit:cover;display:block}
+.pcard-body{padding:16px}
+.pcard-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;padding:3px 10px;border-radius:20px;margin-bottom:8px;text-transform:uppercase}
+.tag-seguros{background:#dbeafe;color:#1d4ed8}
+.tag-creditos{background:#dcfce7;color:#166534}
+.tag-bancarios{background:#f3e8ff;color:#7e22ce}
+.tag-vrim{background:#fce7f3;color:#9d174d}
+.tag-cuentas{background:#ffedd5;color:#c2410c}
+.tag-tarjetas{background:#fef3c7;color:#92400e}
+.tag-inversiones{background:#e0e7ff;color:#3730a3}
+.pcard-title{font-size:15px;font-weight:800;color:#003366;margin-bottom:4px}
+.pcard-sub{font-size:12px;color:#64748b;margin-bottom:12px;line-height:1.5}
+
+/* ACCORDION */
+.acc-toggle{cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+.acc-toggle i{transition:transform .3s;color:#0066cc;font-size:13px;animation:pulseBlue 2.5s ease-in-out infinite}
+.acc-open .acc-toggle i{transform:rotate(180deg);animation:none}
+@keyframes pulseBlue{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.2)}}
+.acc-body{display:none;margin-top:10px}
+.acc-open .acc-body{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+
+.benefit-list{list-style:none;padding:0;margin:0 0 10px}
+.benefit-list li{padding:4px 0 4px 20px;position:relative;font-size:12px;color:#475569;line-height:1.5}
+.benefit-list li::before{content:'✓';position:absolute;left:0;color:#10b981;font-weight:700;font-size:11px}
+
+/* STATS */
+.stats-bar{background:linear-gradient(135deg,#003366 0%,#0066cc 100%)}
+.stat-number{font-weight:900;display:block;line-height:1}
+.stat-label{font-size:.75rem;opacity:.85;margin-top:4px;display:block}
+
+/* FLOAT WA */
+.float-wa{position:fixed;bottom:20px;right:20px;z-index:100;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(37,211,102,.45);font-size:28px;text-decoration:none;transition:all .3s}
+.float-wa::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25d366;animation:wapulse 2s ease-out infinite;z-index:-1}
+@keyframes wapulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
+.float-wa:hover{transform:scale(1.1)}
+
+/* BACK TOP */
+.back-top{position:fixed;bottom:20px;left:20px;z-index:100;width:42px;height:42px;border-radius:50%;background:#003366;color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:all .3s}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:#0066cc;transform:translateY(-2px)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* SEC TITLE */
+.sec-title{display:inline-block;position:relative}
+.sec-title::after{content:'';position:absolute;bottom:-6px;left:0;width:50px;height:3px;background:linear-gradient(to right,#0066cc,#00ccff);border-radius:2px}
+
+/* GRID HELPERS */
+.grid-stars{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.grid-stars{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.grid-stars{grid-template-columns:1fr 1fr 1fr 1fr}}
+
+.grid-catalog{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:640px){.grid-catalog{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.grid-catalog{grid-template-columns:1fr 1fr 1fr}}
+
+/* TABLE */
+.data-table{width:100%;border-collapse:collapse;font-size:11px;margin:8px 0}
+.data-table th{background:#003366;color:white;padding:6px 5px;text-align:center;font-size:10px}
+.data-table td{padding:5px 4px;text-align:center;border-bottom:1px solid #e2e8f0;font-size:11px}
+.data-table tr:nth-child(even) td{background:#f8fafc}
+.data-table .best{background:#dbeafe !important;font-weight:700}
+
+/* VRIM */
+.vrim-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+@media(max-width:640px){.vrim-grid{grid-template-columns:repeat(3,1fr)}}
+.vrim-item{text-align:center}
+.vrim-item img{width:100%;max-height:80px;object-fit:contain;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.vrim-item .vrim-name{font-size:10px;font-weight:700;color:#475569;margin-top:4px}
+.vrim-item .vrim-price{font-size:10px;color:#16a34a;font-weight:800}
+
+/* FOOTER */
+.footer{background:#0f172a;color:#94a3b8}
+.footer a{color:#94a3b8;text-decoration:none}
+.footer a:hover{color:white}
+
+@media(max-width:640px){
+    .float-wa{bottom:14px;right:14px;width:52px;height:52px;font-size:24px}
+    .back-top{bottom:76px;left:auto;right:14px;width:38px;height:38px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- HEADER -->
+<!-- ═══════════════════════════════════════════════ -->
+<header class="header">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <img src="logoinbursa4.png" alt="Inbursa Grupo Financiero" class="h-10 object-contain">
+        <div class="hidden sm:flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5">
+            <i class="fas fa-certificate text-blue-600 text-sm"></i>
+            <span class="text-sm font-semibold text-blue-700">Agente Certificado</span>
+        </div>
+        <a href="https://wa.me/526671886581?text=Hola%2C%20me%20interesa%20conocer%20los%20productos%20de%20Inbursa."
+           target="_blank"
+           class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-4 py-2 rounded-full transition shrink-0">
+            <i class="fab fa-whatsapp"></i><span class="hidden sm:inline">WhatsApp</span>
+        </a>
+    </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="hero">
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content max-w-5xl mx-auto px-4 py-16 w-full">
+        <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-white mb-4">
+                <i class="fas fa-shield-halved text-cyan-300"></i>
+                Banco · Seguros · Casa de Bolsa
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-3">
+                Soluciones Inbursa<br><span class="text-cyan-300">directo con tu agente</span>
+            </h1>
+            <p class="text-base sm:text-lg text-blue-100 mb-6 max-w-lg leading-relaxed">
+                Créditos, cuentas, seguros y TPV. Sin filas, sin sucursales — atención personalizada por WhatsApp.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <a href="#top4" class="bg-white text-blue-700 font-bold px-6 py-3 rounded-lg hover:bg-blue-50 transition flex items-center gap-2 text-sm">
+                    <i class="fas fa-star text-yellow-500"></i> Ver productos estrella
+                </a>
+                <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20productos%20Inbursa."
+                   target="_blank"
+                   class="bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg transition flex items-center gap-2 text-sm">
+                    <i class="fab fa-whatsapp"></i> Escribir ahora
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- STATS BAR (CON CONTADOR ANIMADO) -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="stats-bar text-white py-5 reveal" id="stats-bar">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-4 gap-3 text-center">
+        <div>
+            <span class="stat-number text-xl sm:text-2xl" data-target="40">0</span>+
+            <span class="stat-label">Años</span>
+        </div>
+        <div>
+            <span class="stat-number text-xl sm:text-2xl" data-target="8">0</span>M+
+            <span class="stat-label">Clientes</span>
+        </div>
+        <div>
+            <span class="stat-number text-xl sm:text-2xl" data-target="15">0</span>+
+            <span class="stat-label">Productos</span>
+        </div>
+        <div>
+            <span class="stat-number text-xl sm:text-2xl" data-target="24">0</span>/7
+            <span class="stat-label">Asistencia</span>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- TOP 4: PRODUCTOS ESTRELLA -->
+<!-- ═══════════════════════════════════════════════ -->
+<section id="top4" class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center mb-8 reveal">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2"><span class="sec-title">Los Más Solicitados</span></h2>
+            <p class="text-gray-500 text-sm mt-4">Lo que más buscan nuestros clientes — haz clic y empieza hoy</p>
+        </div>
+
+        <div class="grid-stars">
+
+            <!-- 1. CRÉDITO IMSS -->
+            <div class="star-card reveal">
+                <span class="star-card-badge">🔥 Más buscado</span>
+                <img src="img/credito-imss-pensionados-trabajadores.jpg" alt="Crédito IMSS Inbursa" class="star-card-img">
+                <div class="star-card-body">
+                    <div class="star-card-title"> Crédito Especializado IMSS</div>
+                    <div class="star-card-benefit">Hasta <strong>$650,000</strong> para pensionados, jubilados y trabajadores base del IMSS. Sin avales, sin comisiones de apertura.</div>
+                    <div class="benefit-pills">
+                        <span class="benefit-pill green">Tasa fija 23.47%</span>
+                        <span class="benefit-pill blue">12 a 60 meses</span>
+                        <span class="benefit-pill orange">Seguro de vida incluido</span>
+                    </div>
+                    <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20del%20Crédito%20IMSS%20Inbursa." target="_blank" class="cta-wa">
+                        <i class="fab fa-whatsapp"></i> Me interesa este crédito
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2. CUENTA CT MAX -->
+            <div class="star-card reveal">
+                <span class="star-card-badge"> Ahorro inteligente</span>
+                <img src="img/cuenta-ct-max-rendimientos-diarios.jpg" alt="Cuenta CT Max Inbursa" class="star-card-img">
+                <div class="star-card-body">
+                    <div class="star-card-title"> Cuenta Inbursa CT Max</div>
+                    <div class="star-card-benefit">Tu dinero crece <strong>todos los días</strong> con rendimientos tipo CETES, pero disponible 24/7 cuando lo necesites.</div>
+                    <div class="benefit-pills">
+                        <span class="benefit-pill green">100% CETES</span>
+                        <span class="benefit-pill blue">Chequera + Débito</span>
+                        <span class="benefit-pill purple">Liquidez diaria</span>
+                    </div>
+                    <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20abrir%20una%20Cuenta%20CT%20Max%20Inbursa." target="_blank" class="cta-wa">
+                        <i class="fab fa-whatsapp"></i> Quiero esta cuenta
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. CRÉDITO AUTOMOTRIZ -->
+            <div class="star-card reveal">
+                <span class="star-card-badge">🚗 Estrena hoy</span>
+                <img src="img/credito-automotriz-autoexpress-auto-nuevo.jpg" alt="Crédito Automotriz Autoexpress" class="star-card-img">
+                <div class="star-card-body">
+                    <div class="star-card-title">🚗 Crédito Automotriz Autoexpress</div>
+                    <div class="star-card-benefit">Financiamiento <strong>rápido y flexible</strong> para tu auto nuevo o seminuevo. Aprobación ágil, mensualidades a tu medida.</div>
+                    <div class="benefit-pills">
+                        <span class="benefit-pill green">Enganche desde 20%</span>
+                        <span class="benefit-pill blue">Hasta 60 meses</span>
+                        <span class="benefit-pill orange">Tasa fija o variable</span>
+                    </div>
+                    <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20del%20Crédito%20Automotriz%20Autoexpress." target="_blank" class="cta-wa">
+                        <i class="fab fa-whatsapp"></i> Quiero mi auto
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4. INBURCASA TRASPASA -->
+            <div class="star-card reveal">
+                <span class="star-card-badge">🏠 Reduce tu deuda</span>
+                <img src="img/hipoteca-traspasa-reduce-mensualidad.jpg" alt="Inburcasa Traspasa Hipoteca" class="star-card-img">
+                <div class="star-card-body">
+                    <div class="star-card-title">🏠 Inburcasa Traspasa</div>
+                    <div class="star-card-benefit">¿Pagas mucho por tu hipoteca actual? <strong>Traspásala a Inbursa</strong> y baja tu mensualidad desde el primer mes.</div>
+                    <div class="benefit-pills">
+                        <span class="benefit-pill green">Mejora tu tasa</span>
+                        <span class="benefit-pill blue">Plazo hasta 20 años</span>
+                        <span class="benefit-pill purple">Trámite ágil</span>
+                    </div>
+                    <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20sobre%20Inburcasa%20Traspasa." target="_blank" class="cta-wa">
+                        <i class="fab fa-whatsapp"></i> Quiero reducir mi hipoteca
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CATÁLOGO COMPLETO CON TABS -->
+<!-- ═══════════════════════════════════════════════ -->
+<section id="catalogo" class="py-12">
+    <div class="max-w-5xl mx-auto px-4">
+
+        <div class="text-center mb-8 reveal">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2"><span class="sec-title">Todos Nuestros Productos</span></h2>
+            <p class="text-gray-500 text-sm mt-4">Explora por categoría y encuentra lo que necesitas</p>
+        </div>
+
+        <!-- TABS -->
+        <div class="flex gap-2 flex-wrap justify-center mb-8 reveal overflow-x-auto pb-2">
+            <button class="cat-tab active" onclick="showCat('cuentas',this)"><i class="fas fa-wallet mr-1"></i>Cuentas</button>
+            <button class="cat-tab" onclick="showCat('tarjetas',this)"><i class="fas fa-credit-card mr-1"></i>Tarjetas</button>
+            <button class="cat-tab" onclick="showCat('creditos',this)"><i class="fas fa-hand-holding-dollar mr-1"></i>Créditos</button>
+            <button class="cat-tab" onclick="showCat('inversiones',this)"><i class="fas fa-chart-line mr-1"></i>Inversiones</button>
+            <button class="cat-tab" onclick="showCat('seguros',this)"><i class="fas fa-shield-halved mr-1"></i>Seguros</button>
+            <button class="cat-tab" onclick="showCat('tpv',this)"><i class="fas fa-store mr-1"></i>TPV / Negocios</button>
+            <button class="cat-tab" onclick="showCat('vrim',this)"><i class="fas fa-heart-pulse mr-1"></i>VRIM</button>
+        </div>
+
+        <!-- ─── CUENTAS ─── -->
+        <div id="cat-cuentas" class="catalog-section active">
+            <div class="grid-catalog">
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-ct-max-rendimientos-diarios.jpg" alt="Cuenta CT Max" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-cuentas">Cuentas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuenta Inbursa CT Max <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Rendimientos diarios con liquidez inmediata. Tu dinero trabaja para ti.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Rendimiento ligado a CETES</li>
+                                <li>Saldo disponible 24/7</li>
+                                <li>Chequera y tarjeta de débito incluidas</li>
+                                <li>Blindaje antifraude: reembolso en 72 hrs</li>
+                                <li>Retiros sin comisión en red Multired</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20abrir%20una%20Cuenta%20CT%20Max." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Abrir esta cuenta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-efe-chequera-debito.jpg" alt="Cuenta Efe" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-cuentas">Cuentas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuenta Inbursa Efe <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Cuenta clásica de cheques y débito con opciones de inversión a la vista.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Tarjeta de débito internacional</li>
+                                <li>Chequera personalizada</li>
+                                <li>App y banca en línea incluidas</li>
+                                <li>Transferencias SPEI sin costo</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20Cuenta%20Efe." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-black-amex-premium.jpg" alt="Black American Express" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-cuentas">Cuentas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Black American Express Débito <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Cuenta premium con tarjeta Amex Débito y acceso a inversiones con tasas preferenciales.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Tarjeta American Express de débito</li>
+                                <li>Tasas preferenciales de inversión</li>
+                                <li>Atención ejecutiva personalizada</li>
+                                <li>Beneficios exclusivos Amex</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20Black%20Amex%20Débito." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-sanborns-descuentos.jpg" alt="Cuenta Sanborns" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-cuentas">Cuentas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuenta con Sanborns <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Tarjeta de débito con descuentos y promociones exclusivas en tiendas y restaurantes Sanborns.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>10% de descuento en Sanborns</li>
+                                <li>Puntos y promociones especiales</li>
+                                <li>Facilidades de pago en tienda</li>
+                                <li>Tarjeta de débito funcional</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20Cuenta%20Sanborns." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-nomina-recibe-tu-sueldo.jpg" alt="Nómina Inbursa" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-cuentas">Cuentas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuenta de Nómina <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Recibe tu salario sin comisiones y accede a adelantos de sueldo y créditos de nómina.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Sin comisiones por manejo de cuenta</li>
+                                <li>Adelantos de sueldo disponibles</li>
+                                <li>Acceso a créditos de nómina</li>
+                                <li>Seguro de vida sin costo</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20una%20Cuenta%20de%20Nómina." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Abrir cuenta de nómina</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-basica-sin-comisiones.jpg" alt="Cuenta Básica" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-cuentas">Cuentas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuenta Básica (Sin Comisiones) <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Cuenta de débito elemental sin costo, sin saldo mínimo. Para todos.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Sin comisión por apertura</li>
+                                <li>Sin saldo mínimo requerido</li>
+                                <li>Tarjeta de débito incluida</li>
+                                <li>Regulada por ley</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20Cuenta%20Básica." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─── TARJETAS DE CRÉDITO ─── -->
+        <div id="cat-tarjetas" class="catalog-section">
+            <div class="grid-catalog">
+
+                <div class="pcard reveal">
+                    <img src="img/tarjeta-black-american-express-premium.jpg" alt="Black American Express Crédito" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-tarjetas">Tarjetas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Black American Express® <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">La tarjeta más exclusiva. Acceso a salones VIP, seguros de viaje globales y asistencia 24/7.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Acceso a salones VIP en aeropuertos</li>
+                                <li>Seguros de viaje internacionales</li>
+                                <li>Acumulación acelerada de puntos</li>
+                                <li>Asistencia personalizada 24 horas</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20Black%20Amex%20Crédito." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar tarjeta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/tarjeta-platinum-inbursa.jpg" alt="Tarjeta Platinum" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-tarjetas">Tarjetas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Tarjeta Platinum / Oro <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Límites amplios, tasas competitivas, seguros de compra y coberturas médicas internacionales.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Límites de crédito amplios</li>
+                                <li>Seguro de compra protegida</li>
+                                <li>Cobertura médica internacional</li>
+                                <li>Meses sin intereses en comercios aliados</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20tarjeta%20Platinum%20o%20Oro." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar tarjeta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/tarjeta-clasica-optim-a.jpg" alt="Tarjeta Clásica" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-tarjetas">Tarjetas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Tarjeta Clásica / Óptima <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Ideal para compras diarias. La Óptima premia tu puntualidad reduciendo la tasa de interés.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Sin anualidad con consumo mínimo</li>
+                                <li>Tasa que baja con pago puntual</li>
+                                <li>Meses sin intereses</li>
+                                <li>Seguro de protección de compras</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20tarjeta%20Clásica." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar tarjeta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/tarjeta-fundacion-unam-causa.jpg" alt="Tarjeta UNAM" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-tarjetas">Tarjetas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Tarjeta Fundación UNAM <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Tarjeta con causa. Un porcentaje de tus compras apoya becas e investigación de la UNAM.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Apoya becas universitarias</li>
+                                <li>Meses sin intereses</li>
+                                <li>Beneficios bancarios completos</li>
+                                <li>Impacto social con cada compra</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20la%20tarjeta%20Fundación%20UNAM." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar tarjeta</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/tarjeta-enlace-medico.jpg" alt="Tarjeta Enlace Médico" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-tarjetas">Tarjetas</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Tarjeta Enlace Médico <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Exclusiva para profesionales de la salud. Beneficios corporativos y tasas preferenciales.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Diseñada para médicos y dentistas</li>
+                                <li>Tasas preferenciales</li>
+                                <li>Beneficios de seguros médicos</li>
+                                <li>Crédito para equipo profesional</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20soy%20profesional%20de%20la%20salud%20y%20quiero%20la%20tarjeta%20Enlace%20Médico." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar tarjeta</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─── CRÉDITOS ─── -->
+        <div id="cat-creditos" class="catalog-section">
+            <div class="grid-catalog">
+
+                <div class="pcard reveal">
+                    <img src="img/credito-imss-pensionados-trabajadores.jpg" alt="Crédito IMSS" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Crédito IMSS (Pensionados y Base) <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Hasta $650,000 con tasa fija preferencial. Descuento directo en nómina o pensión.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Montos de $5,000 a $650,000</li>
+                                <li>Tasa fija anual 23.47% sin IVA</li>
+                                <li>Plazos de 12 a 60 meses</li>
+                                <li>Sin avales ni comisiones de apertura</li>
+                                <li>Seguro de vida incluido (liquida saldo)</li>
+                                <li>Descuento directo en cuenta de nómina/pensión</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20el%20Crédito%20IMSS." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar crédito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/credito-personal-libre-disposicion.jpg" alt="Crédito Personal" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Crédito Personal <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Liquidez inmediata para viajes, remodelación, educación o cualquier meta. Hasta $300,000.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Montos hasta $300,000 M.N.</li>
+                                <li>Plazos 12 a 60 meses</li>
+                                <li>Tasa fija durante todo el crédito</li>
+                                <li>Sin necesidad de garantía</li>
+                                <li>Aprobación rápida</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20un%20Crédito%20Personal." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar crédito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/adelanto-nomina-liquidez-rapida.jpg" alt="Adelanto de Nómina" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Adelanto de Nómina <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Liquidez inmediata descontada de tu sueldo. Sin trámites complicados.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Para quienes reciben nómina en Inbursa</li>
+                                <li>Descuento directo en tu quincena/mes</li>
+                                <li>Aprobación exprés</li>
+                                <li>Sin papeleos excesivos</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20un%20Adelanto%20de%20Nómina." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar adelanto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/hipoteca-adquisicion-compra-casa.jpg" alt="Inburcasa Adquisición" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Inburcasa Adquisición <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Compra, construye o remodela tu hogar con tasas fijas y plazos hasta 20 años.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Financiamiento hasta 90% del valor</li>
+                                <li>Tasa fija competitiva</li>
+                                <li>Plazos hasta 20 años</li>
+                                <li>Casa nueva, usada o construcción</li>
+                                <li>Proceso ágil y digital</li>
+                                <li>Seguro de vida e inmueble incluido</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20un%20Crédito%20Hipotecario%20Inburcasa." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Precalificar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/hipoteca-traspasa-reduce-mensualidad.jpg" alt="Inburcasa Traspasa" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Inburcasa Traspasa <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Traspasa tu hipoteca de otro banco y reduce tu mensualidad. Ahorra desde el primer mes.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Mejora tu tasa de interés</li>
+                                <li>Reduce tu pago mensual</li>
+                                <li>Acorta o extiende tu plazo</li>
+                                <li>Trámite ágil con mínimo papeleo</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20traspasar%20mi%20hipoteca%20a%20Inbursa." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Quiero traspasar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/credito-automotriz-autoexpress-auto-nuevo.jpg" alt="Crédito Automotriz" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Crédito Automotriz Autoexpress <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Financia tu auto nuevo o seminuevo. También disponible Arrendamiento Puro (Leasing).</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Unidades nuevas y seminuevas</li>
+                                <li>Enganche desde 20%</li>
+                                <li>Plazos 12 a 60 meses</li>
+                                <li>Tasa fija o variable</li>
+                                <li>Arrendamiento Puro con deducción fiscal</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20un%20Crédito%20Automotriz%20Autoexpress." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Quiero mi auto</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─── INVERSIONES ─── -->
+        <div id="cat-inversiones" class="catalog-section">
+            <div class="grid-catalog">
+
+                <div class="pcard reveal">
+                    <img src="img/pagare-inversion-plazo-fijo.jpg" alt="Pagaré Inbursa" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-inversiones">Inversiones</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Pagaré Inbursa <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Invierte a plazo fijo (7 a 360 días) con tasa garantizada desde el primer día.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Tasa fija y garantizada</li>
+                                <li>Plazos de 7 a 360 días</li>
+                                <li>Capitalización mensual disponible</li>
+                                <li>Monto mínimo accesible</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20invertir%20en%20un%20Pagaré%20Inbursa." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Quiero invertir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/inversiones-flexibles-codeflex-ct.jpg" alt="Inversiones Flexibles" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-inversiones">Inversiones</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Inversiones Flexibles (Codeflex / CT) <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Inversiones con ventanas de retiro y tasas indexadas al mercado. Tu dinero crece con flexibilidad.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Codeflex, CODE, CT Patrimonial, CT Plus</li>
+                                <li>Flexibilidad de retiro anticipado</li>
+                                <li>Tasas competitivas del mercado</li>
+                                <li>Capitalización mensual</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20Inversiones%20Flexibles." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/fondos-inversion-renta-fija-variable.jpg" alt="Fondos de Inversión" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-inversiones">Inversiones</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Fondos de Inversión <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Portafolios diversificados de renta fija y variable. Gestión profesional respaldada por Casa de Bolsa Inbursa.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Fondos conservadores, moderados y dinámicos</li>
+                                <li>Renta fija gubernamental y corporativa</li>
+                                <li>Renta variable nacional e internacional</li>
+                                <li>Acceso desde montos accesibles</li>
+                                <li>Reportes de rendimiento en línea</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20Fondos%20de%20Inversión." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Quiero invertir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pcard reveal">
+                    <img src="img/cuenta-ct-max-rendimientos-diarios.jpg" alt="Cuenta CT Max Inversión" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-inversiones">Inversiones</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuenta CT Max (Inversión + Liquidez) <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">La cuenta que invierte automáticamente tus saldos con rendimientos CETES y liquidez total.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>100% de la tasa CETES</li>
+                                <li>Dinero disponible 24/7</li>
+                                <li>Tarjeta de débito y chequera</li>
+                                <li>App y banca en línea</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20abrir%20una%20Cuenta%20CT%20Max." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Abrir esta cuenta</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─── SEGUROS ─── -->
+        <div id="cat-seguros" class="catalog-section">
+            <div class="grid-catalog">
+
+                <!-- AUTO -->
+                <div class="pcard reveal">
+                    <img src="img/seguro-auto-autotal-cobertura-amplia.jpg" alt="Seguro de Auto Autotal" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Seguro de Auto — Autotal <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Cobertura completa para tu vehículo con amplia red de talleres y asistencia vial 24/7.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Cobertura amplia, limitada o solo RC</li>
+                                <li>Daños materiales, robo total y parcial</li>
+                                <li>Responsabilidad civil a terceros</li>
+                                <li>Gastos médicos a ocupantes</li>
+                                <li>Asistencia vial 24/7: grúa, paso de corriente, llanta</li>
+                                <li>Auto sustituto mientras reparas</li>
+                                <li>Defensa legal incluida</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20cotizar%20Seguro%20de%20Auto%20Autotal." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Cotizar auto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOTO -->
+                <div class="pcard reveal">
+                    <img src="img/seguro-moto-motocicleta.jpg" alt="Seguro de Moto" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Seguro de Moto <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Protección especializada para motociclistas con cobertura nacional.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Daños materiales a la moto</li>
+                                <li>Robo total de la motocicleta</li>
+                                <li>Responsabilidad civil a terceros</li>
+                                <li>Gastos médicos al conductor</li>
+                                <li>Asistencia vial 24/7</li>
+                                <li>Cobertura en toda la República Mexicana</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20cotizar%20Seguro%20de%20Moto." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Cotizar moto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDA -->
+                <div class="pcard reveal">
+                    <img src="img/seguro-vida-proteccion-familiar.jpg" alt="Seguro de Vida" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Seguro de Vida <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Protección financiera para tu familia. Planes temporales y permanentes.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Muerte por cualquier causa</li>
+                                <li>Suma asegurada desde $100,000</li>
+                                <li>Coberturas: invalidez, enfermedades graves</li>
+                                <li>Prima fija durante toda la vigencia</li>
+                                <li>Beneficiarios múltiples</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20del%20Seguro%20de%20Vida." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GASTOS MÉDICOS -->
+                <div class="pcard reveal">
+                    <img src="img/gastos-medicos-mayores-hospitalizacion.jpg" alt="Gastos Médicos Mayores" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Gastos Médicos Mayores <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Cobertura hospitalaria completa para ti y tu familia. Red nacional de hospitales.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Hospitalización, cirugías y urgencias</li>
+                                <li>Red nacional de hospitales preferentes</li>
+                                <li>Suma asegurada desde $1,000,000</li>
+                                <li>Deducibles y coaseguros flexibles</li>
+                                <li>Maternidad y enfermedades crónicas</li>
+                                <li>Reembolso o pago directo al hospital</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20cotizar%20Gastos%20Médicos%20Mayores." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Cotizar ahora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOGAR -->
+                <div class="pcard reveal">
+                    <img src="img/seguro-hogar-proteccion-casa.jpg" alt="Protección Hogar" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Protección Hogar <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Protege tu casa y sus contenidos. Para propietarios e inquilinos.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Incendio, explosión, terremoto, inundación</li>
+                                <li>Robo de contenidos del hogar</li>
+                                <li>Responsabilidad civil familiar</li>
+                                <li>Asistencia 24/7: plomería, electricidad, cerrajería</li>
+                                <li>Aplica para casa propia o rentada</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20Protección%20Hogar." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MÉDICOS COLECTIVO -->
+                <div class="pcard reveal">
+                    <img src="img/seguros-colectivos-empresas.jpg" alt="Seguros Colectivos Empresas" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Seguros Colectivos — Empresas <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Gastos médicos, vida y accidentes para tus colaboradores. Planes a la medida.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Cobertura para grupos de empleados</li>
+                                <li>Primas preferenciales por volumen</li>
+                                <li>Administración digital del grupo</li>
+                                <li>Atención en red médica preferente</li>
+                                <li>Seguro de vida colectivo disponible</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20cotizar%20Seguros%20Colectivos%20para%20mi%20empresa." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Cotizar empresa</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ─── TPV / NEGOCIOS ─── -->
+        <div id="cat-tpv" class="catalog-section">
+            <div class="grid-catalog">
+
+                <!-- TPV PRINCIPAL -->
+                <div class="pcard reveal" style="grid-column: 1 / -1;">
+                    <img src="img/terminal-punto-venta-tpv-inalambrica.jpg" alt="Terminal Punto de Venta Inbursa" class="pcard-img" style="max-height:220px;object-fit:cover;">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-bancarios">TPV / Negocios</span>
+                        <div class="pcard-title text-lg mb-2">🏪 Terminal Punto de Venta (TPV)</div>
+                        <div class="pcard-sub">Acepta pagos con tarjeta, vales y CoDi. 4 modelos para tu negocio. <strong>¡Con seguro de vida y asistencia 24/7 incluidos!</strong></div>
+
+                        <div class="acc-body" style="display:block;">
+                            <!-- Modelos -->
+                            <p class="text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">📦 Modelos disponibles</p>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                <div class="bg-blue-50 rounded-lg p-3 text-center">
+                                    <div class="text-xs font-bold text-blue-800">i-Móvil</div>
+                                    <div class="text-xs text-gray-500">App Android</div>
+                                    <div class="text-xs font-bold text-green-600">$120/mes</div>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-3 text-center">
+                                    <div class="text-xs font-bold text-blue-800">Wi-Fi</div>
+                                    <div class="text-xs text-gray-500">Inalámbrica</div>
+                                    <div class="text-xs font-bold text-green-600">$310/mes</div>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-3 text-center">
+                                    <div class="text-xs font-bold text-blue-800">GPRS</div>
+                                    <div class="text-xs text-gray-500">Red Telcel</div>
+                                    <div class="text-xs font-bold text-green-600">$550/mes</div>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-3 text-center">
+                                    <div class="text-xs font-bold text-blue-800">InburTap</div>
+                                    <div class="text-xs text-gray-500">NFC virtual</div>
+                                    <div class="text-xs font-bold text-green-600">Sin costo</div>
+                                </div>
+                            </div>
+
+                            <!-- BENEFICIOS ESTRELLA -->
+                            <div class="bg-green-50 rounded-xl p-4 mb-4 border border-green-200">
+                                <p class="text-sm font-bold text-green-800 mb-3">🎁 Incluido SIN COSTO con tu TPV:</p>
+                                <div class="grid sm:grid-cols-2 gap-2 text-xs text-gray-700">
+                                    <div class="flex gap-2 items-start">
+                                        <i class="fas fa-shield-heart text-green-500 mt-0.5 flex-shrink-0"></i>
+                                        <span><strong>Seguro de Vida</strong> para ti + 19 empleados ($50K–$100K c/u)</span>
+                                    </div>
+                                    <div class="flex gap-2 items-start">
+                                        <i class="fas fa-wrench text-green-500 mt-0.5 flex-shrink-0"></i>
+                                        <span><strong>Asistencia 24/7:</strong> plomero, electricista, cerrajero, vidriero</span>
+                                    </div>
+                                    <div class="flex gap-2 items-start">
+                                        <i class="fas fa-truck-medical text-green-500 mt-0.5 flex-shrink-0"></i>
+                                        <span><strong>Ambulancia y médico</strong> para tu local en emergencias</span>
+                                    </div>
+                                    <div class="flex gap-2 items-start">
+                                        <i class="fas fa-gavel text-green-500 mt-0.5 flex-shrink-0"></i>
+                                        <span><strong>Defensa legal</strong> 24 hrs para tu negocio</span>
+                                    </div>
+                                    <div class="flex gap-2 items-start">
+                                        <i class="fas fa-laptop-code text-green-500 mt-0.5 flex-shrink-0"></i>
+                                        <span><strong>Soporte técnico</strong> de cómputo por teléfono</span>
+                                    </div>
+                                    <div class="flex gap-2 items-start">
+                                        <i class="fas fa-chart-pie text-green-500 mt-0.5 flex-shrink-0"></i>
+                                        <span><strong>Punto Electrónico:</strong> panel de gestión de ventas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Punto Electrónico destacado -->
+                            <div class="bg-blue-50 rounded-xl p-4 mb-4 border border-blue-200">
+                                <p class="text-sm font-bold text-blue-800 mb-2">💻 Punto Electrónico: Tu dinero bajo control</p>
+                                <ul class="benefit-list">
+                                    <li>Ventas en tiempo real desde tu celular</li>
+                                    <li>Reportes diarios, semanales y mensuales</li>
+                                    <li>Control transparente de depósitos</li>
+                                    <li>Cero sorpresas, cero enredos</li>
+                                </ul>
+                            </div>
+
+                            <!-- Tasas -->
+                            <p class="text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide"> Tasas especiales por giro</p>
+                            <table class="data-table mb-4">
+                                <thead><tr><th>Giro</th><th>Crédito</th><th>Débito</th></tr></thead>
+                                <tbody>
+                                    <tr><td>Médicos/Dentistas</td><td>0.65%</td><td>0.65%</td></tr>
+                                    <tr><td>Restaurantes</td><td>2.40%</td><td>1.70%</td></tr>
+                                    <tr><td>Farmacias</td><td>1.69%</td><td>1.39%</td></tr>
+                                    <tr><td>Comercios generales</td><td>1.50% – 3.0%</td><td>—</td></tr>
+                                </tbody>
+                            </table>
+
+                            <!-- MSI -->
+                            <div class="bg-purple-50 rounded-xl p-4 mb-4 border border-purple-200">
+                                <p class="text-sm font-bold text-purple-800 mb-2">📅 Meses Sin Intereses (MSI)</p>
+                                <p class="text-xs text-gray-600 mb-2">Ofrece MSI a tus clientes con tarjetas de 15 bancos. Facturación mínima $80,000/mes.</p>
+                                <table class="data-table">
+                                    <thead><tr><th>Plazo</th><th>Sobretasa</th><th>Compra mín.</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>3 meses</td><td>3.00%</td><td>$300</td></tr>
+                                        <tr><td>6 meses</td><td>5.80%</td><td>$600</td></tr>
+                                        <tr><td>9 meses</td><td>8.70%</td><td>$900</td></tr>
+                                        <tr><td>12 meses</td><td>11.70%</td><td>$1,200</td></tr>
+                                        <tr><td>18 meses</td><td>15.00%</td><td>$1,800</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Ligas de Pago -->
+                            <div class="bg-orange-50 rounded-xl p-4 mb-4 border border-orange-200">
+                                <p class="text-sm font-bold text-orange-800 mb-2">🔗 Ligas de Pago</p>
+                                <p class="text-xs text-gray-600">¿Vendes por WhatsApp o redes? Genera un link seguro con el monto y tu cliente paga desde su celular. Sin página web.</p>
+                            </div>
+
+                            <!-- Ventajas financieras -->
+                            <div class="bg-yellow-50 rounded-xl p-4 mb-4 border border-yellow-200">
+                                <p class="text-sm font-bold text-yellow-800 mb-2">💰 Ventajas que te benefician</p>
+                                <ul class="benefit-list">
+                                    <li>Depósito al siguiente día hábil</li>
+                                    <li>Sin fianza ni facturación mínima</li>
+                                    <li>Visa, MC, Amex y vales de despensa</li>
+                                    <li>CoDi y pagos contactless</li>
+                                    <li>Cero cargos administrativos fantasma</li>
+                                    <li>Cash Back disponible</li>
+                                </ul>
+                            </div>
+
+                            <!-- Requisitos -->
+                            <div class="bg-gray-50 rounded-xl p-4 mb-4 border border-gray-200">
+                                <p class="text-sm font-bold text-gray-700 mb-2">📝 Solo necesitas</p>
+                                <ul class="benefit-list">
+                                    <li>Cuenta Inbursa (donde caen tus ventas)</li>
+                                    <li>Constancia de Situación Fiscal (RFC)</li>
+                                    <li>INE vigente</li>
+                                    <li>Comprobante de domicilio</li>
+                                </ul>
+                            </div>
+
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20contratar%20una%20TPV%20Inbursa%20para%20mi%20negocio." target="_blank" class="cta-wa" style="max-width:400px;margin:0 auto;display:flex;">
+                                <i class="fab fa-whatsapp"></i> Contratar TPV ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRÉDITO EXPRESS TPV -->
+                <div class="pcard reveal">
+                    <img src="img/credito-express-tpv-financiamiento.jpg" alt="Crédito Express TPV" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos PyME</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Crédito Express TPV <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Financiamiento basado en tu facturación y historial de cobros con TPV Inbursa.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Basado en tu historial de cobros TPV</li>
+                                <li>Aprobación rápida</li>
+                                <li>Capital de trabajo</li>
+                                <li>Sin garantías adicionales</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20del%20Crédito%20Express%20TPV." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CUENTAS EMPRESARIALES -->
+                <div class="pcard reveal">
+                    <img src="img/cuenta-empresarial-md-flujo-operativo.jpg" alt="Cuenta Empresarial MD" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-bancarios">Negocios</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Cuentas Empresariales <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Cuenta MD, CT Empresarial, Efe Empresarial, Inburbásica Empresarial. Control total de flujo operativo.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Cuenta MD: pagos y transferencias masivas</li>
+                                <li>CT Empresarial: inversión integrada automática</li>
+                                <li>Cuenta en Dólares para comercio exterior</li>
+                                <li>Integración con sistema Aspel (SAE, COI)</li>
+                                <li>Banca en línea empresarial con mancomunidad</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20cuentas%20empresariales." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRÉDITOS PYME SECTORIALES -->
+                <div class="pcard reveal">
+                    <img src="img/creditos-pyme-sectores-escuelas-medicos.jpg" alt="Créditos PyME Sectoriales" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-creditos">Créditos PyME</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Créditos Express Sectoriales <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Financiamiento rápido para Escuelas, Guarderías, Médicos y Restauranteros.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Crédito Express Escuelas: infraestructura y capital</li>
+                                <li>Crédito Express Guarderías: expansión y seguridad</en>
+                                <li>Crédito Express Médicos: equipo y consultorio</li>
+                                <li>Crédito Express Restauranteros: remodelación</li>
+                                <li>Inburpyme: crédito general a mediano/largo plazo</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20un%20Crédito%20Express%20para%20mi%20negocio." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Solicitar crédito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FLOTILLAS / AUTOTOTAL -->
+                <div class="pcard reveal">
+                    <img src="img/autotal-flotillas-seguro-vehiculos-empresariales.jpg" alt="Autotal Flotillas" class="pcard-img">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-seguros">Seguros PyME</span>
+                        <div class="pcard-title acc-toggle" onclick="toggleAcc(this)">Autotal Flotillas <i class="fas fa-chevron-down"></i></div>
+                        <div class="pcard-sub">Seguro multivehículo para flotillas de transporte pesado, utilitarios o autos corporativos.</div>
+                        <div class="acc-body">
+                            <ul class="benefit-list">
+                                <li>Pólizas multivehículo</li>
+                                <li>Daños materiales y robo</li>
+                                <li>Cobertura para flotillas completas</li>
+                                <li>Precios preferenciales por volumen</li>
+                            </ul>
+                            <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20cotizar%20Autotal%20Flotillas." target="_blank" class="cta-wa"><i class="fab fa-whatsapp"></i> Cotizar flotilla</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── VRIM ─── -->
+        <div id="cat-vrim" class="catalog-section">
+            <div class="grid-catalog" style="grid-template-columns:1fr;">
+
+                <div class="pcard reveal">
+                    <img src="img/vrim-banner-membresia-salud-bienestar.jpg" alt="VRIM Membresía de Salud" class="pcard-img" style="height:80px;object-fit:cover;">
+                    <div class="pcard-body">
+                        <span class="pcard-tag tag-vrim">Membresías</span>
+                        <div class="pcard-title text-lg mb-1">VRIM — Programa de Salud, Protección y Bienestar</div>
+                        <p class="pcard-sub mb-4">Membresía anual con cobertura nacional. 5 niveles desde $850/año. Médico 24h, ambulancia, check up, videoconsultas y servicio funerario completo.</p>
+
+                        <!-- 5 tarjetas -->
+                        <div class="vrim-grid mb-6">
+                            <div class="vrim-item">
+                                <img src="img/vrim-tarjeta-plus-membresia.jpg" alt="VRIM Plus">
+                                <p class="vrim-name">VRIM Plus</p>
+                                <p class="vrim-price">$850/año</p>
+                            </div>
+                            <div class="vrim-item">
+                                <img src="img/vrim-tarjeta-black-membresia.jpg" alt="VRIM Black">
+                                <p class="vrim-name">BLACK</p>
+                                <p class="vrim-price">$1,150/año</p>
+                            </div>
+                            <div class="vrim-item">
+                                <img src="img/vrim-tarjeta-platino-membresia.jpg" alt="VRIM Platino">
+                                <p class="vrim-name">PLATINO</p>
+                                <p class="vrim-price">$2,300/año</p>
+                            </div>
+                            <div class="vrim-item">
+                                <img src="img/vrim-tarjeta-ideal-membresia.jpg" alt="VRIM Ideal">
+                                <p class="vrim-name">ideal</p>
+                                <p class="vrim-price">$3,990/año</p>
+                            </div>
+                            <div class="vrim-item">
+                                <img src="img/vrim-tarjeta-elite-membresia.jpg" alt="VRIM Elite">
+                                <p class="vrim-name">ELITE</p>
+                                <p class="vrim-price">$7,200/año</p>
+                            </div>
+                        </div>
+
+                        <!-- Incluyen todas -->
+                        <div class="bg-blue-50 rounded-xl p-4 mb-4 border border-blue-100">
+                            <p class="text-sm font-bold text-blue-800 mb-3">✅ Lo que INCLUYEN TODAS las membresías</p>
+                            <div class="grid sm:grid-cols-2 gap-2 text-sm text-gray-700">
+                                <div class="flex gap-2 items-start"><i class="fas fa-ambulance text-red-400 mt-0.5 flex-shrink-0"></i><span><strong>Ambulancia sin costo</strong> por urgencia real (1 al año)</span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-stethoscope text-blue-400 mt-0.5 flex-shrink-0"></i><span><strong>Médico 24/7</strong> por teléfono o videoconsulta</span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-video text-purple-400 mt-0.5 flex-shrink-0"></i><span><strong>2 Videoconsultas de especialidad</strong> sin costo/año</span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-vial text-green-400 mt-0.5 flex-shrink-0"></i><span><strong>Check Up gratis</strong> — Química Sanguínea + BH + EGO</span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-cross text-gray-400 mt-0.5 flex-shrink-0"></i><span><strong>Servicio funerario completo</strong> incluye cremación (0–70 años)</span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-heartbeat text-red-400 mt-0.5 flex-shrink-0"></i><span><strong>Orientación Nutricional y Emocional</strong></span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-file-medical text-blue-400 mt-0.5 flex-shrink-0"></i><span><strong>Expediente Clínico Electrónico</strong> y receta digital</span></div>
+                                <div class="flex gap-2 items-start"><i class="fas fa-hospital text-green-400 mt-0.5 flex-shrink-0"></i><span><strong>Red de proveedores</strong> con precios preferenciales</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Tabla comparativa -->
+                        <p class="text-sm font-bold text-gray-800 mb-2">🔍 Tabla Comparativa</p>
+                        <div class="overflow-x-auto mb-4">
+                        <table class="data-table">
+                            <thead><tr>
+                                <th style="text-align:left;min-width:140px">Beneficio</th>
+                                <th>Plus<br><small style="font-weight:400">$850</small></th>
+                                <th>BLACK<br><small style="font-weight:400">$1,150</small></th>
+                                <th>PLATINO<br><small style="font-weight:400">$2,300</small></th>
+                                <th>IDEAL<br><small style="font-weight:400">$3,990</small></th>
+                                <th class="best">ELITE<br><small style="font-weight:400">$7,200</small></th>
+                            </tr></thead>
+                            <tbody>
+                                <tr><td style="text-align:left">Muerte Accidental</td><td>$110,000</td><td>$200,000</td><td>$500,000</td><td>$500,000</td><td class="best">$500,000</td></tr>
+                                <tr><td style="text-align:left">Pérdida de miembros</td><td>$30,000</td><td>$30,000</td><td>$200,000</td><td>$200,000</td><td class="best">$200,000</td></tr>
+                                <tr><td style="text-align:left">Gastos Médicos Accidente</td><td>$20,000</td><td>$20,000</td><td>$50,000</td><td>$50,000</td><td class="best">$50,000</td></tr>
+                                <tr><td style="text-align:left">Seguro de Vida</td><td>—</td><td>—</td><td>—</td><td>$100,000</td><td class="best">$200,000</td></tr>
+                                <tr><td style="text-align:left">Procedimientos Quirúrgicos</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="best">$50,000</td></tr>
+                                <tr><td style="text-align:left">Seguro Dental</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="best">$10,000</td></tr>
+                                <tr><td style="text-align:left">Consulta presencial</td><td>—</td><td>1</td><td>1</td><td>1</td><td class="best">2</td></tr>
+                                <tr><td style="text-align:left">Electrocardiograma</td><td>—</td><td>—</td><td>1</td><td>1</td><td class="best">1</td></tr>
+                                <tr><td style="text-align:left">Mastografía / Próstata</td><td>—</td><td>—</td><td>—</td><td>1 c/u</td><td class="best">1 c/u</td></tr>
+                                <tr><td style="text-align:left">Tele de Tórax</td><td>—</td><td>—</td><td>—</td><td>1</td><td class="best">1</td></tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4">Cobertura de 0 a 70 años · Renovación hasta 75 años · Aplican tiempos de espera</p>
+                        <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20las%20Membresías%20VRIM." target="_blank" class="cta-wa" style="max-width:400px;margin:0 auto;display:flex;">
+                            <i class="fab fa-whatsapp"></i> Elegir mi membresía VRIM
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- BANCA DIGITAL -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="py-12 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="text-center mb-8 reveal">
+            <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2"><span class="sec-title">Banca Digital Inbursa</span></h2>
+            <p class="text-gray-500 text-sm mt-4">Todo tu banco en la palma de tu mano</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+            <div class="text-center p-5 rounded-2xl bg-blue-50 border border-blue-100">
+                <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-mobile-screen-button text-white text-xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-900 mb-1 text-sm">App Inbursa Móvil</h3>
+                <p class="text-xs text-gray-500">Consultas, transferencias SPEI sin costo, pagos de servicios, recargas y token digital.</p>
+            </div>
+            <div class="text-center p-5 rounded-2xl bg-green-50 border border-green-100">
+                <div class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-globe text-white text-xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-900 mb-1 text-sm">Banca en Línea</h3>
+                <p class="text-xs text-gray-500">Portal web transaccional completo desde tu computadora.</p>
+            </div>
+            <div class="text-center p-5 rounded-2xl bg-purple-50 border border-purple-100">
+                <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fab fa-apple text-white text-xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-900 mb-1 text-sm">Apple Pay / Garmin Pay</h3>
+                <p class="text-xs text-gray-500">Pagos contactless desde tu iPhone o reloj inteligente.</p>
+            </div>
+            <div class="text-center p-5 rounded-2xl bg-orange-50 border border-orange-100">
+                <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fab fa-whatsapp text-white text-xl"></i>
+                </div>
+                <h3 class="font-bold text-gray-900 mb-1 text-sm">Alertas + WhatsApp</h3>
+                <p class="text-xs text-gray-500">Notificaciones SMS de cada movimiento y atención ejecutiva por chat.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CTA FINAL -->
+<!-- ═══════════════════════════════════════════════ -->
+<section class="py-16 reveal" style="background:linear-gradient(135deg,#003366 0%,#0066cc 60%,#00aaff 100%)">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-white mb-3">¿Listo para dar el siguiente paso?</h2>
+        <p class="text-blue-100 text-base mb-6">Escríbenos por WhatsApp y conoce el producto ideal para ti. Tu agente certificado te responde en minutos.</p>
+        <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20productos%20de%20Inbursa."
+           target="_blank"
+           class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-black text-lg px-8 py-4 rounded-xl transition shadow-2xl">
+            <i class="fab fa-whatsapp text-2xl"></i> Enviar WhatsApp ahora
+        </a>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════════ -->
+<footer class="footer py-10">
+    <div class="max-w-5xl mx-auto px-4">
+        <div class="grid sm:grid-cols-3 gap-6 mb-6">
+            <div>
+                <img src="logoinbursa4.png" alt="Inbursa Grupo Financiero" class="h-10 object-contain mb-3">
+                <p class="text-xs">Banco · Seguros · TPVs · Casa de Bolsa</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-3 text-sm">Productos</h4>
+                <ul class="text-xs space-y-2">
+                    <li><button onclick="showCat('cuentas',null);scrollTo('catalogo')" class="hover:text-white transition">Cuentas</button></li>
+                    <li><button onclick="showCat('tarjetas',null);scrollTo('catalogo')" class="hover:text-white transition">Tarjetas de Crédito</button></li>
+                    <li><button onclick="showCat('creditos',null);scrollTo('catalogo')" class="hover:text-white transition">Créditos</button></li>
+                    <li><button onclick="showCat('inversiones',null);scrollTo('catalogo')" class="hover:text-white transition">Inversiones</button></li>
+                    <li><button onclick="showCat('seguros',null);scrollTo('catalogo')" class="hover:text-white transition">Seguros</button></li>
+                    <li><button onclick="showCat('tpv',null);scrollTo('catalogo')" class="hover:text-white transition">TPV / Negocios</button></li>
+                    <li><button onclick="showCat('vrim',null);scrollTo('catalogo')" class="hover:text-white transition">Membresías VRIM</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-3 text-sm">Contacto</h4>
+                <a href="https://wa.me/526671886581?text=Hola%2C%20quiero%20información%20de%20productos%20Inbursa."
+                   target="_blank"
+                   class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition font-bold text-sm">
+                    <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+                </a>
+                <p class="text-xs text-slate-500 mt-2">Tu agente certificado te responde en breve.</p>
+            </div>
+        </div>
+        <div class="border-t border-slate-800 pt-5 text-center text-xs text-slate-500">
+            © 2026 Agente Certificado Grupo Financiero Inbursa. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/526671886581?text=Hola%2C%20me%20interesa%20conocer%20los%20productos%20de%20Inbursa."
+   target="_blank" class="float-wa" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- JAVASCRIPT -->
+<!-- ═══════════════════════════════════════════════ -->
+<script>
+// ─── TABS ──────────────────────────────────────────
+function showCat(cat, btn) {
+    document.querySelectorAll('.catalog-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    const section = document.getElementById('cat-' + cat);
+    if (section) section.classList.add('active');
+    if (btn) {
+        btn.classList.add('active');
+    } else {
+        document.querySelectorAll('.cat-tab').forEach(t => {
+            if (t.getAttribute('onclick') && t.getAttribute('onclick').includes("'" + cat + "'")) t.classList.add('active');
+        });
+    }
+    setTimeout(observeReveal, 50);
+}
+
+function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({behavior:'smooth'});
+}
+
+// ─── ACCORDION ─────────────────────────────────────
+function toggleAcc(el) {
+    el.closest('.pcard').classList.toggle('acc-open');
+}
+
+// ─── REVEAL ON SCROLL ──────────────────────────────
+function observeReveal() {
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                if (e.target.id === 'stats-bar' && !countersStarted) {
+                    startCounters();
+                }
+                obs.unobserve(e.target);
+            }
+        });
+    }, {threshold: 0.08});
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+observeReveal();
+
+// ─── COUNTER ANIMATION ─────────────────────────────
+let countersStarted = false;
+function startCounters() {
+    countersStarted = true;
+    const counters = document.querySelectorAll('.stat-number');
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000;
+        const start = performance.now();
+        function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            counter.innerText = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(update);
+            else counter.innerText = target;
+        }
+        requestAnimationFrame(update);
+    });
+}
+
+// ── BACK TO TOP ───────────────────────────────────
+window.addEventListener('scroll', () => {
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+});
+</script>
+</body>
+</html>
