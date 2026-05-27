@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos — Agente Certificado Inbursa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f0f4f8; color: #1e293b; -webkit-font-smoothing: antialiased; }
+
+        .header {
+            background: #fff; border-bottom: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .header-inner {
+            max-width: 1100px; margin: 0 auto; padding: 12px 20px;
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        }
+        .header-badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: linear-gradient(135deg, #003366, #0066cc);
+            color: white; font-size: 11px; font-weight: 700;
+            padding: 4px 12px; border-radius: 20px;
+        }
+        .header-title { font-size: 17px; font-weight: 900; color: #003366; margin-left: 10px; }
+        .btn-back {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: #f1f5f9; border: 1px solid #e2e8f0;
+            color: #475569; font-size: 12px; font-weight: 600;
+            padding: 7px 14px; border-radius: 20px; text-decoration: none; transition: all .2s;
+        }
+        .btn-back:hover { background: #e2e8f0; color: #003366; }
+
+        .hero-strip {
+            background: linear-gradient(135deg, #003366 0%, #0066cc 60%, #00aaff 100%);
+            padding: 36px 20px 32px; text-align: center;
+        }
+        .hero-strip h1 { color: white; font-size: 26px; font-weight: 900; margin-bottom: 6px; }
+        .hero-strip p { color: rgba(255,255,255,.7); font-size: 14px; }
+
+        .search-wrap {
+            max-width: 1100px; margin: -20px auto 0; padding: 0 20px; position: relative; z-index: 10;
+        }
+        .search-inner {
+            background: white; border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.10);
+            padding: 14px 20px; display: flex; align-items: center; gap: 10px;
+        }
+        .search-inner i { color: #94a3b8; font-size: 15px; }
+        .search-inner input {
+            border: none; outline: none; font-family: 'Inter', sans-serif;
+            font-size: 14px; color: #1e293b; flex: 1; background: transparent;
+        }
+        .search-inner input::placeholder { color: #94a3b8; }
+
+        .main { max-width: 1100px; margin: 28px auto 60px; padding: 0 20px; }
+
+        .info-bar {
+            background: #dbeafe; border: 1px solid #bfdbfe; border-radius: 10px;
+            padding: 10px 16px; margin-bottom: 24px;
+            display: flex; align-items: center; gap: 10px;
+            font-size: 13px; color: #1d4ed8; font-weight: 500;
+        }
+        .info-bar i { font-size: 16px; color: #3b82f6; flex-shrink: 0; }
+
+        .sec-title {
+            font-size: 13px; font-weight: 800; color: #64748b;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+        }
+        .sec-title::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+
+        .pdf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px; margin-bottom: 40px;
+        }
+
+        .pdf-card {
+            background: white; border-radius: 16px; border: 1px solid #e2e8f0;
+            overflow: hidden; transition: all .28s cubic-bezier(0.16,1,0.3,1);
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+            display: flex; flex-direction: column;
+        }
+        .pdf-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(0,51,102,.10);
+            border-color: #0066cc;
+        }
+
+        .pdf-preview {
+            height: 120px;
+            background: linear-gradient(135deg, #003366, #0055aa);
+            display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden;
+        }
+        .pdf-preview::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 30% 40%, rgba(0,136,238,.3), transparent);
+        }
+        .pdf-preview i { font-size: 40px; color: rgba(255,255,255,.9); position: relative; z-index: 1; }
+        .pdf-preview .pdf-ext {
+            position: absolute; bottom: 10px; right: 12px;
+            background: rgba(255,255,255,.15); color: white;
+            font-size: 9px; font-weight: 800; letter-spacing: 1px;
+            padding: 2px 8px; border-radius: 20px; z-index: 1;
+        }
+
+        .pdf-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+        .pdf-name { font-size: 14px; font-weight: 800; color: #0f172a; margin-bottom: 4px; line-height: 1.3; }
+        .pdf-size { font-size: 11px; color: #94a3b8; margin-bottom: 12px; }
+
+        .pdf-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+        .btn-view, .btn-dl, .btn-share {
+            flex: 1; min-width: 60px;
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 5px; border-radius: 9px; font-size: 11px; font-weight: 700;
+            padding: 8px 6px; text-decoration: none; transition: all .2s;
+            border: none; cursor: pointer; font-family: 'Inter', sans-serif;
+        }
+        .btn-view   { background: #eff6ff; color: #1d4ed8; }
+        .btn-view:hover { background: #dbeafe; }
+        .btn-dl     { background: linear-gradient(135deg, #003366, #0066cc); color: white; box-shadow: 0 3px 10px rgba(0,102,204,.25); }
+        .btn-dl:hover { box-shadow: 0 6px 18px rgba(0,102,204,.4); transform: scale(1.02); }
+        .btn-share  { background: #f0fdf4; color: #16a34a; }
+        .btn-share:hover { background: #dcfce7; }
+
+        /* Loading skeleton */
+        .skeleton-card {
+            background: white; border-radius: 16px; border: 1px solid #e2e8f0;
+            overflow: hidden; animation: pulse 1.5s ease-in-out infinite;
+        }
+        .skeleton-top { height: 120px; background: #e2e8f0; }
+        .skeleton-body { padding: 16px; }
+        .skeleton-line { height: 12px; background: #e2e8f0; border-radius: 6px; margin-bottom: 10px; }
+        .skeleton-line.short { width: 60%; }
+        .skeleton-btns { display: flex; gap: 6px; margin-top: 14px; }
+        .skeleton-btn { flex: 1; height: 32px; background: #e2e8f0; border-radius: 9px; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+
+        /* Empty / error states */
+        .state-box {
+            grid-column: 1 / -1; text-align: center;
+            padding: 60px 20px; color: #94a3b8;
+        }
+        .state-box i { font-size: 42px; margin-bottom: 14px; display: block; }
+        .state-box h3 { font-size: 16px; font-weight: 800; color: #475569; margin-bottom: 6px; }
+        .state-box p { font-size: 13px; line-height: 1.6; }
+
+        /* Contador */
+        .count-badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: #dbeafe; color: #1d4ed8;
+            font-size: 12px; font-weight: 700;
+            padding: 3px 10px; border-radius: 20px; margin-left: 8px;
+        }
+
+        footer { background: #0f172a; color: #475569; text-align: center; padding: 20px; font-size: 11px; }
+        footer a { color: #0088ee; text-decoration: none; }
+
+        .toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+            background: #0f172a; color: white; border-radius: 50px;
+            padding: 10px 20px; font-size: 13px; font-weight: 600;
+            box-shadow: 0 8px 24px rgba(0,0,0,.3);
+            display: flex; align-items: center; gap: 8px;
+            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); z-index: 999;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+        .toast i { color: #22c55e; }
+
+        @media(max-width:480px){
+            .hero-strip h1 { font-size: 20px; }
+            .pdf-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <div style="display:flex;align-items:center;">
+            <span class="header-badge"><i class="fas fa-certificate"></i> Inbursa</span>
+            <span class="header-title">Formatos</span>
+        </div>
+        <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Regresar al sitio</a>
+    </div>
+</header>
+
+<div class="hero-strip">
+    <h1><i class="fas fa-folder-open" style="color:#66d9ff;margin-right:10px;font-size:22px;"></i>Documentos y Formatos</h1>
+    <p>Los archivos se cargan automáticamente — solo sube un PDF a la carpeta y aparece aquí</p>
+</div>
+
+<div class="search-wrap">
+    <div class="search-inner">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Buscar formato por nombre…" oninput="filterCards()">
+    </div>
+</div>
+
+<main class="main">
+
+    <div class="info-bar">
+        <i class="fas fa-circle-info"></i>
+        <span><strong>Ver</strong> → abre en el navegador &nbsp;·&nbsp; <strong>Descargar</strong> → guarda el archivo &nbsp;·&nbsp; <strong>Compartir</strong> → copia el link al portapapeles</span>
+    </div>
+
+    <div class="sec-title">
+        <i class="fas fa-file-pdf" style="color:#ef4444"></i>
+        Documentos disponibles
+        <span class="count-badge" id="countBadge" style="display:none"><span id="countNum">0</span> archivos</span>
+    </div>
+
+    <div class="pdf-grid" id="pdfGrid">
+        <!-- Skeletons mientras carga -->
+        <div class="skeleton-card" id="sk1"><div class="skeleton-top"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-btns"><div class="skeleton-btn"></div><div class="skeleton-btn"></div><div class="skeleton-btn"></div></div></div></div>
+        <div class="skeleton-card" id="sk2"><div class="skeleton-top"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-btns"><div class="skeleton-btn"></div><div class="skeleton-btn"></div><div class="skeleton-btn"></div></div></div></div>
+        <div class="skeleton-card" id="sk3"><div class="skeleton-top"></div><div class="skeleton-body"><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="skeleton-btns"><div class="skeleton-btn"></div><div class="skeleton-btn"></div><div class="skeleton-btn"></div></div></div></div>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 Agente Certificado Grupo Financiero Inbursa ·
+    <a href="index.html">Regresar al sitio</a>
+</footer>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i> <span id="toastMsg"></span></div>
+
+<script>
+    // ══════════════════════════════════════════════
+    //  CONFIGURACIÓN — Cambia estos dos valores
+    // ══════════════════════════════════════════════
+    const GITHUB_USER = 'Trendingtopicok';
+    const GITHUB_REPO = 'portafolioinbursa';
+    const GITHUB_BRANCH = 'main';
+    const PDF_FOLDER = 'pdfs';
+    // ══════════════════════════════════════════════
+
+    const BASE_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${PDF_FOLDER}/`;
+    const API_URL  = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${PDF_FOLDER}?ref=${GITHUB_BRANCH}`;
+
+    async function loadPDFs() {
+        const grid = document.getElementById('pdfGrid');
+        try {
+            const res = await fetch(API_URL);
+            if (!res.ok) throw new Error('No se pudo acceder al repositorio');
+            const files = await res.json();
+
+            // Filtrar solo PDFs
+            const pdfs = files.filter(f => f.name.toLowerCase().endsWith('.pdf'));
+
+            // Limpiar skeletons
+            grid.innerHTML = '';
+
+            if (pdfs.length === 0) {
+                grid.innerHTML = `
+                    <div class="state-box">
+                        <i class="fas fa-folder-open" style="color:#cbd5e1"></i>
+                        <h3>Aún no hay formatos</h3>
+                        <p>Sube archivos PDF a la carpeta <code>pdfs/</code> de tu repositorio<br>y aparecerán aquí automáticamente.</p>
+                    </div>`;
+                return;
+            }
+
+            // Mostrar contador
+            document.getElementById('countNum').textContent = pdfs.length;
+            document.getElementById('countBadge').style.display = 'inline-flex';
+
+            pdfs.forEach(file => {
+                const name = file.name.replace('.pdf', '').replace(/-/g, ' ').replace(/_/g, ' ');
+                const displayName = name.charAt(0).toUpperCase() + name.slice(1);
+                const fileUrl = file.download_url;
+                const sizeKB = file.size ? (file.size / 1024).toFixed(0) + ' KB' : '';
+
+                const card = document.createElement('div');
+                card.className = 'pdf-card';
+                card.setAttribute('data-name', displayName.toLowerCase());
+                card.innerHTML = `
+                    <div class="pdf-preview">
+                        <i class="fas fa-file-pdf"></i>
+                        <span class="pdf-ext">PDF</span>
+                    </div>
+                    <div class="pdf-body">
+                        <p class="pdf-name">${displayName}</p>
+                        ${sizeKB ? `<p class="pdf-size"><i class="fas fa-weight-hanging" style="margin-right:4px"></i>${sizeKB}</p>` : ''}
+                        <div class="pdf-actions">
+                            <a class="btn-view"  href="${fileUrl}" target="_blank"><i class="fas fa-eye"></i> Ver</a>
+                            <a class="btn-dl"    href="${fileUrl}" download="${file.name}"><i class="fas fa-download"></i> Descargar</a>
+                            <button class="btn-share" onclick="shareLink('${fileUrl}', '${displayName}')"><i class="fas fa-share-nodes"></i> Compartir</button>
+                        </div>
+                    </div>`;
+                grid.appendChild(card);
+            });
+
+        } catch (err) {
+            grid.innerHTML = `
+                <div class="state-box">
+                    <i class="fas fa-triangle-exclamation" style="color:#f59e0b"></i>
+                    <h3>No se pudieron cargar los archivos</h3>
+                    <p>Verifica que la carpeta <code>pdfs/</code> existe en tu repositorio.<br><small style="color:#cbd5e1">${err.message}</small></p>
+                </div>`;
+        }
+    }
+
+    function filterCards() {
+        const q = document.getElementById('searchInput').value.toLowerCase();
+        document.querySelectorAll('.pdf-card').forEach(c => {
+            c.style.display = c.getAttribute('data-name').includes(q) ? '' : 'none';
+        });
+    }
+
+    function shareLink(url, name) {
+        navigator.clipboard.writeText(url).then(() => {
+            showToast(`Link de "${name}" copiado al portapapeles`);
+        }).catch(() => {
+            // Fallback para móvil
+            const ta = document.createElement('textarea');
+            ta.value = url; document.body.appendChild(ta);
+            ta.select(); document.execCommand('copy');
+            document.body.removeChild(ta);
+            showToast(`Link copiado al portapapeles`);
+        });
+    }
+
+    function showToast(msg) {
+        const t = document.getElementById('toast');
+        document.getElementById('toastMsg').textContent = msg;
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    loadPDFs();
+</script>
+</body>
+</html>
